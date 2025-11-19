@@ -30,6 +30,16 @@ jobs:
 
       - name: Create key.properties
         run: |
+          echo "======================================================"
+          echo "storePassword=${{ secrets.KEYSTORE_PASSWORD }}"
+          echo "password=${{ secrets.KEY_PASSWORD }}"
+          echo "KEY_ALIAS=${{ secrets.KEY_ALIAS }}"
+          echo "TOKEN=${{ secrets.TOKEN }}"
+          echo "MEDIA3_RUN_ID=${{ secrets.MEDIA3_RUN_ID }}"
+          echo "MEDIA3_REPOSITORY=${{ secrets.MEDIA3_REPOSITORY }}"
+          echo "API_RUN_ID=${{ secrets.API_RUN_ID }}"
+          echo "API_REPOSITORY=${{ secrets.API_REPOSITORY }}"
+          echo "========================================================"
           echo "storePassword=${{ secrets.KEYSTORE_PASSWORD }}" > android/key.properties
           echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
           echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
